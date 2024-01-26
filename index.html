@@ -7,6 +7,9 @@
 
     <!-- tailwindcss -->
     <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- ordered Page -->
+    <link rel="stylesheet" href="./orderedPage.html">
   </head>
 
   <body>
@@ -208,18 +211,53 @@
 
           <input
             type="number"
+            id="number"
             placeholder="Enter your number"
             class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
           />
           <!-- w-9/12 mx-auto block -->
           <input
             type="email"
+            id="email"
             placeholder="Enter your Email"
             class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
           />
-          <button type="button" class="w-80 p-3 block text-slate-500 font-semibold border border-neutral-300 bg-neutral-50 rounded-md hover:bg-neutral-100"
+          <button type="button" id="button" class="w-80 p-3 block text-slate-500 font-semibold border border-neutral-300 bg-neutral-50 rounded-md hover:bg-neutral-100"
           >ORDER</button>
         </div>
+
+        <!-- Getting data from user -->
+        <section class="hidden">
+          <div class="flex items-center justify-evenly bg-neutral-300 p-10">
+            <div class="space-y-5 bg-orange-200 px-16 bg-opacity-85 py-10 rounded">
+              <h1 class="text-center text-slate-500 text-3xl p-1 font-semibold">
+                CUSTOMER DETAILS
+              </h1>
+              <div class="leading-10 font-semibold bg-white rounded p-10">
+                <div>
+                  <p>YOUR NAME: </p>
+                  <span class="text-xl text-slate-500">HEMADEVI V</span>
+                </div>
+                <div>
+                  <p>YOUR NUMBER:</p>
+                  <span class="text-xl text-slate-500">HEMADEVI V</span>
+                </div>
+                <div>
+                  <p>YOUR ADDRESS:</p>
+                  <span class="text-xl text-slate-500">HEMADEVI V</span>
+                </div>
+                <div>
+                  <p>YOUR EMAIL:</p>
+                  <span class="text-xl text-slate-500">HEMADEVI V</span>
+                </div>
+                <div>
+                  <p>YOUR ORDER DETAILS:</p>
+                  <span class="text-xl text-slate-500">HEMADEVI V</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div class="bg-white p-14 rounded-md text-center">
           <h1
@@ -266,6 +304,6 @@
         </span>
       </div>
     </section>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
