@@ -29,7 +29,7 @@
           alt="Logo"
           class="absolute top-5 left-5 w-20"
         />
-        <a href="">
+        <a href="https://github.com/Hema-venkat3/ice-cream-order-form">
           <img
             src="./assets/images/icons8-github-30.png"
             alt="Github"
@@ -188,7 +188,7 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-evenly bg-neutral-300 p-10">
+      <form class="flex items-center justify-evenly bg-neutral-300 p-10" id="myForm">
         <div class="space-y-5 bg-orange-200 px-16 bg-opacity-85 py-10 rounded">
           <h1 class="text-center text-slate-500 text-3xl p-1 font-semibold">
             CUSTOMER DETAILS
@@ -197,8 +197,10 @@
             type="text"
             id="Name"
             placeholder="Enter your name"
+        
             class="outline-none w-80 p-3 border border-neutral-300 block rounded-md hover:bg-neutral-100"
           />
+          <span class="nameError" id="nameError"></span>
 
           <textarea
             name="address"
@@ -206,24 +208,30 @@
             cols="20"
             rows="5"
             placeholder="Enter your address"
+            
             class="outline-none w-80 resize-none border border-neutral-300 p-3 block rounded-md hover:bg-neutral-100"
           ></textarea>
+          <span class="textareaError" id="textareaError"></span>
 
           <input
             type="number"
             id="number"
             placeholder="Enter your number"
+  
             class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
           />
+          <span class="numberError" id="numberError"></span>
           <!-- w-9/12 mx-auto block -->
           <input
             type="email"
             id="email"
             placeholder="Enter your Email"
+        
             class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
           />
-          <button type="button" id="button" class="w-80 p-3 block text-slate-500 font-semibold border border-neutral-300 bg-neutral-50 rounded-md hover:bg-neutral-100"
-          >ORDER</button>
+          <span class="emailError" id="emailError"></span>
+          <button type="submit" id="button" class="w-80 p-3 block text-slate-500 font-semibold border border-neutral-300 bg-neutral-50 rounded-md hover:bg-neutral-100"
+            >ORDER</button>
         </div>
 
         <!-- Getting data from user -->
@@ -271,7 +279,7 @@
             alt="cupcakes"
           />
         </div>
-      </div>
+      </form>
 
       <div class="mt-5 text-center leading-10">
         <span class="text-slate-500 text-xl font-semibold"
