@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice-cream order form</title>
+
+    <!-- tailwindcss -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <div class="relative h-96">
+      <!-- Background image -->
+      <img
+        class="absolute inset-0 object-cover w-full h-full"
+        src="./assets/images/cake-1.avif"
+        alt="Background"
+      />
+
+      <!-- Overlay text -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <p class="text-white text-4xl font-bold font-serif">CAKE ORDER FORM</p>
+        <img
+          src="./assets/images/ca.webp"
+          alt="Logo"
+          class="absolute top-5 left-5 w-20"
+        />
+        <a href="">
+          <img
+            src="./assets/images/icons8-github-30.png"
+            alt="Github"
+            width="35"
+            class="absolute right-5 top-5 bg-orange-200 hover:bg-orange-300 rounded-full p-1"
+          />
+        </a>
+      </div>
+    </div>
+
+    <section class="py-5 bg-orange-200 text-xl">
+      <div class="flex items-center justify-evenly mb-5">
+        <div
+          class="bg-white px-16 py-10 rounded-md leading-loose shadow-2xl shadow-neutral-500 m-5"
+        >
+          <h3
+            class="text-3xl bg-orange-200 p-3 mb-5 text-white font-semibold rounded text-center"
+          >
+            Flavour
+          </h3>
+          <div>
+            <input type="checkbox" name="Banana" id="Banana" value="Banana" />
+            <label for="Banana">Banana</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Caramel"
+              id="Caramel"
+              value="Caramel"
+            />
+            <label for="Caramel">Caramel</label>
+          </div>
+          <div>
+            <input type="checkbox" name="Carrot" id="Carrot" value="Carrot" />
+            <label for="Carrot">Carrot</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="Strawberry" value="Strawberry" />
+            <label for="Strawberry">Strawberry</label>
+          </div>
+          <div>
+            <input type="checkbox" name="Lemon" id="Lemon" value="Lemon" />
+            <label for="Lemon">Lemon</label>
+          </div>
+        </div>
+
+        <div
+          class="bg-white px-14 py-10 rounded-md leading-loose shadow-2xl shadow-neutral-500 m-5"
+        >
+          <h3
+            class="text-3xl bg-orange-200 p-3 mb-5 text-white font-semibold rounded text-center"
+          >
+            Filling
+          </h3>
+          <div>
+            <input
+              type="checkbox"
+              name="Vanilla"
+              id="Vanilla"
+              value="Vanilla"
+            />
+            <label for="Vanilla">Vanilla</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Chocolate"
+              id="Chocolate"
+              value="Chocolate"
+            />
+            <label for="Chocolate">Chocolate</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Rasberry"
+              id="Rasberry"
+              value="Rasberry"
+            />
+            <label for="Rasberry">Rasberry</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Cream_cheese"
+              id="Cream_cheese"
+              value="Cream_cheese"
+            />
+            <label for="Cream_cheese">Cream Cheese</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Salted_caramel"
+              id="Salted_caramel"
+              value="Salted_caramel"
+            />
+            <label for="Salted_caramel">Salted Caramel</label>
+          </div>
+        </div>
+
+        <div
+          class="bg-white px-14 py-10 rounded-md leading-loose shadow-2xl shadow-neutral-500 m-5"
+        >
+          <h3
+            class="text-3xl bg-orange-200 p-3 mb-5 text-white font-semibold rounded text-center"
+          >
+            Icing
+          </h3>
+          <div>
+            <input
+              type="checkbox"
+              name="Fondant"
+              id="Fondant"
+              value="Fondant"
+            />
+            <label for="Fondant">Fondant</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="butter_cream"
+              id="butter_cream"
+              value="butter_cream"
+            />
+            <label for="butter_cream">Butter Cream</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="orange_cream"
+              id="orange_cream"
+              value="orange_cream"
+            />
+            <label for="orange_cream">Orange Cream</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Ganache"
+              id="Ganache"
+              value="Ganache"
+            />
+            <label for="Ganache">Ganache</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="Fudge_icing"
+              id="Fudge_icing"
+              value="Fudge_icing"
+            />
+            <label for="Fudge_icing">Fudge Icing</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-evenly bg-neutral-300 p-10">
+        <div class="space-y-5 bg-orange-200 px-16 bg-opacity-85 py-10 rounded">
+          <h1 class="text-center text-slate-500 text-3xl p-1 font-semibold">
+            CUSTOMER DETAILS
+          </h1>
+          <input
+            type="text"
+            id="Name"
+            placeholder="Enter your name"
+            class="outline-none w-80 p-3 border border-neutral-300 block rounded-md hover:bg-neutral-100"
+          />
+
+          <textarea
+            name="address"
+            id="address"
+            cols="20"
+            rows="5"
+            placeholder="Enter your address"
+            class="outline-none w-80 resize-none border border-neutral-300 p-3 block rounded-md hover:bg-neutral-100"
+          ></textarea>
+
+          <input
+            type="number"
+            placeholder="Enter your number"
+            class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
+          />
+          <!-- w-9/12 mx-auto block -->
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
+          />
+          <button type="button" class="w-80 p-3 block text-slate-500 font-semibold border border-neutral-300 bg-neutral-50 rounded-md hover:bg-neutral-100"
+          >ORDER</button>
+        </div>
+
+        <div class="bg-white p-14 rounded-md text-center">
+          <h1
+            class="text-3xl font-semibold text-slate-500 mb-10 bg-orange-200 w-80 mx-auto p-1 rounded"
+          >
+            HOMEMADE CAKES
+          </h1>
+          <img
+            src="https://t4.ftcdn.net/jpg/06/22/76/15/360_F_622761542_8KzVxiU9o7njQTCvSlc3bpksREjryB0Z.jpg"
+            class="rounded shadow-2xl shadow-neutral-400 transition-transform duration-500 ease-in-out hover:scale-105"
+            alt="cupcakes"
+          />
+        </div>
+      </div>
+
+      <div class="mt-5 text-center leading-10">
+        <span class="text-slate-500 text-xl font-semibold"
+          >Visit us on
+          <div class="flex items-center justify-center gap-3">
+            <img
+              src="./assets/images/icons8-instagram-50.png"
+              alt="Instagram"
+              width="30"
+              class="bg-neutral-300 rounded-full p-1"
+            />
+            <img
+              src="./assets/images/icons8-facebook-50.png"
+              alt="Facebook"
+              width="30"
+              class="bg-neutral-300 rounded-full p-1"
+            />
+            <img
+              src="./assets/images/icons8-whatsapp-50.png"
+              alt="Whatsapp"
+              width="30"
+              class="bg-neutral-300 rounded-full p-1"
+            />
+          </div>
+          <small
+            >Terms of service | Privacy policy | Refund policy | Accessibility
+            policy <br />
+            With Love HEMA ❤️</small
+          >
+        </span>
+      </div>
+    </section>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
