@@ -17,7 +17,7 @@
       <!-- Background image -->
       <img
         class="absolute inset-0 object-cover w-full h-full"
-        src="./assets/images/cake-1.avif"
+        src="./assets/images/banner.jpg"
         alt="Background"
       />
 
@@ -34,19 +34,21 @@
             src="./assets/images/icons8-github-30.png"
             alt="Github"
             width="35"
-            class="absolute right-5 top-5 bg-orange-200 hover:bg-orange-300 rounded-full p-1"
+            class="absolute right-5 top-5 bg-orange-300 hover:bg-orange-300 rounded-full p-1"
           />
         </a>
       </div>
     </div>
 
-    <section class="py-5 bg-orange-200 text-xl">
-      <div class="flex items-center justify-evenly mb-5">
+    <section class="py-5 bg-orange-300 text-xl">
+      <div class="flex items-center justify-evenly mb-5" id="menu">
+        <!-- FLAVOUR -->
         <div
           class="bg-white px-16 py-10 rounded-md leading-loose shadow-2xl shadow-neutral-500 m-5"
+          id="flavour"
         >
           <h3
-            class="text-3xl bg-orange-200 p-3 mb-5 text-white font-semibold rounded text-center"
+            class="text-3xl bg-orange-300 p-3 mb-5 text-white font-semibold rounded text-center"
           >
             Flavour
           </h3>
@@ -77,11 +79,12 @@
           </div>
         </div>
 
+        <!-- FILLING -->
         <div
           class="bg-white px-14 py-10 rounded-md leading-loose shadow-2xl shadow-neutral-500 m-5"
         >
           <h3
-            class="text-3xl bg-orange-200 p-3 mb-5 text-white font-semibold rounded text-center"
+            class="text-3xl bg-orange-300 p-3 mb-5 text-white font-semibold rounded text-center"
           >
             Filling
           </h3>
@@ -132,11 +135,12 @@
           </div>
         </div>
 
+        <!-- ICING -->
         <div
           class="bg-white px-14 py-10 rounded-md leading-loose shadow-2xl shadow-neutral-500 m-5"
         >
           <h3
-            class="text-3xl bg-orange-200 p-3 mb-5 text-white font-semibold rounded text-center"
+            class="text-3xl bg-orange-300 p-3 mb-5 text-white font-semibold rounded text-center"
           >
             Icing
           </h3>
@@ -189,13 +193,14 @@
       </div>
 
       <form class="flex items-center justify-evenly bg-neutral-300 p-10" id="myForm">
-        <div class="space-y-5 bg-orange-200 px-16 bg-opacity-85 py-10 rounded">
+        <div class="space-y-5 bg-orange-300 px-16 bg-opacity-85 py-10 rounded max-w-xl block" id="getData">
           <h1 class="text-center text-slate-500 text-3xl p-1 font-semibold">
             CUSTOMER DETAILS
           </h1>
           <input
             type="text"
             id="Name"
+            name="Name"
             placeholder="Enter your name"
         
             class="outline-none w-80 p-3 border border-neutral-300 block rounded-md hover:bg-neutral-100"
@@ -216,6 +221,7 @@
           <input
             type="number"
             id="number"
+            name="number"
             placeholder="Enter your number"
   
             class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
@@ -225,6 +231,7 @@
           <input
             type="email"
             id="email"
+            name="email"
             placeholder="Enter your Email"
         
             class="outline-none w-80 p-3 block border border-neutral-300 rounded-md hover:bg-neutral-100"
@@ -235,41 +242,37 @@
         </div>
 
         <!-- Getting data from user -->
-        <section class="hidden">
-          <div class="flex items-center justify-evenly bg-neutral-300 p-10">
-            <div class="space-y-5 bg-orange-200 px-16 bg-opacity-85 py-10 rounded">
-              <h1 class="text-center text-slate-500 text-3xl p-1 font-semibold">
-                CUSTOMER DETAILS
+        <section class="hidden" id="showData">
+          <div class="flex items-center justify-evenly max-w-2xl space-x-10">
+            <div class="space-y-5 bg-orange-300 bg-opacity-85 p-5 rounded shadow-2xl shadow-neutral-500 text-center">
+              <h1 class="text-center text-slate-500 text-3xl font-semibold">
+                ORDER DETAILS
               </h1>
-              <div class="leading-10 font-semibold bg-white rounded p-10">
-                <div>
-                  <p>YOUR NAME: </p>
-                  <span class="text-xl text-slate-500">HEMADEVI V</span>
-                </div>
-                <div>
-                  <p>YOUR NUMBER:</p>
-                  <span class="text-xl text-slate-500">HEMADEVI V</span>
-                </div>
-                <div>
-                  <p>YOUR ADDRESS:</p>
-                  <span class="text-xl text-slate-500">HEMADEVI V</span>
-                </div>
-                <div>
-                  <p>YOUR EMAIL:</p>
-                  <span class="text-xl text-slate-500">HEMADEVI V</span>
-                </div>
-                <div>
-                  <p>YOUR ORDER DETAILS:</p>
-                  <span class="text-xl text-slate-500">HEMADEVI V</span>
-                </div>
-              </div>
+
+              <div class="overflow-x-auto">
+                <table class="table-auto border divide-y divide-gray-200 min-w-full bg-white rounded m-5" id="table">
+                  <th class="p-3 border-2 rounded border-s-slate-50 hover:bg-orange-200 text-slate-500">Name</th>
+                  <th class="p-3 border-2 rounded border-s-slate-50 hover:bg-orange-200 text-slate-500 ">Address</th>
+                  <th class="p-3 border-2 rounded border-s-slate-50 hover:bg-orange-200 text-slate-500">Number</th>
+                  <th class="p-3 border-2 rounded border-s-slate-50 hover:bg-orange-200 text-slate-500">Email</th>
+                  <th class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Ordered Menu</th>
+                </th>
+              </table>
+            </div>
+            <div>
+              <span class="text-2xl text-white font-semibold text-shadow shadow-md">THANKS FOR YOUR ORDER!</span>
+              <a href="/" class="font-semibold text-slate-500 text-xl m-5 hover:text-white text-shadow shadow-md">Home</a>
+            </div>
+          </div>
+            <div>
+              <img src="./assets/images/choco-1.jpg" alt="choco" class="max-w-sm shadow-2xl shadow-neutral-500 rounded">
             </div>
           </div>
         </section>
 
-        <div class="bg-white p-14 rounded-md text-center">
+        <div class="bg-white p-14 rounded-md text-center max-w-2xl block" id="homemade_cakes">
           <h1
-            class="text-3xl font-semibold text-slate-500 mb-10 bg-orange-200 w-80 mx-auto p-1 rounded"
+            class="text-3xl font-semibold text-slate-500 mb-10 bg-orange-300 w-80 mx-auto p-1 rounded"
           >
             HOMEMADE CAKES
           </h1>
